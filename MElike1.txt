@@ -1,0 +1,123 @@
+1)
+mysql> SELECT COUNT(Name) FROM city;
++-------------+
+| COUNT(Name) |
++-------------+
+|        4079 |
++-------------+
+1 row in set (0.01 sec)
+
+2)
+mysql> SELECT COUNT(Population) FROM country;
++-------------------+
+| COUNT(Population) |
++-------------------+
+|               239 |
++-------------------+
+1 row in set (0.01 sec)
+
+3)
+mysql>  SELECT (Name) FROM country ORDER BY LifeExpectancy ASC;
++----------------------------------------------+
+| Name                                         |
++----------------------------------------------+
+| Antarctica                                   |
+| French Southern territories                  |
+| Bouvet Island           
+
+4)
+
+
+
+5)
+
+
+
+6)
+mysql> SELECT (name) FROM (city) WHERE name LIKE 'A%';
++-------------------------+
+| name                    |
++-------------------------+
+| Amsterdam               |
+| Apeldoorn               |
+| Almere                  |
+| Arnhem                  |
+| Amersfoort              |
+| Alkmaar                 |
+| Alger                   |
+| Annaba                  |
+| Andorra la Vella        |
+| Abu Dhabi               |
+| al-Ayn                  |
+| Ajman                   |
+| Almirante Brown         |
+| Avellaneda              |
+| Adelaide                |
+| al-Manama               |
+| Antwerpen               |
+| Aracaju                 |
+| Ananindeua  
+
+7)
+mysql> SELECT COUNT(name) FROM country WHERE name != 'China';
++-------------+
+| COUNT(name) |
++-------------+
+|         238 |
++-------------+
+1 row in set (0.01 sec)
+
+8)
+mysql> SELECT name, population  FROM country ORDER BY Population ASC;
++----------------------------------------------+------------+
+| name                                         | population |
++----------------------------------------------+------------+
+| Antarctica                                   |          0 |
+| French Southern territories                  |          0 |
+| Bouvet Island                                |          0 |
+| Heard Island and McDonald Islands            |          0 |
+| British Indian Ocean Territory               |          0 |
+| South Georgia and the South Sandwich Islands |          0 |
+| United States Minor Outlying Islands         |          0 |
+| Pitcairn                                     |         50 |
+| Cocos (Keeling) Islands                      |        600 |
+| Holy See (Vatican City State)                |       1000 |
+| Falkland Islands                             |       2000 |
+| Norfolk Island                               |       2000 |
+| Niue                                         |       2000 |
+| Tokelau                                      |       2000 |
+| Christmas Island                             |       2500 |
+| Svalbard and Jan Mayen                       |       3200 |
+| Saint Helena                                 |       6000 |
+| Saint Pierre and Miquelon                    |       7000 |
+| Anguilla                                     |       8000 |
+
+
+9)
+mysql> SELECT COUNT(name) FROM country 
+    -> ;
++-------------+
+| COUNT(name) |
++-------------+
+|         239 |
++-------------+
+1 row in set (0.01 sec)
+
+10)
+mysql> SELECT name, surfacearea  FROM country ORDER BY SurfaceArea DESC;
++----------------------------------------------+-------------+
+| name                                         | surfacearea |
++----------------------------------------------+-------------+
+| Russian Federation                           | 17075400.00 |
+| Antarctica                                   | 13120000.00 |
+| Canada                                       |  9970610.00 |
+| China                                        |  9572900.00 |
+| United States                                |  9363520.00 |
+| Brazil                                       |  8547403.00 |
+| Australia                                    |  7741220.00 |
+| India                                        |  3287263.00 |
+| Argentina                                    |  2780400.00 |
+| Kazakstan                                    |  2724900.00 |
+
+11)SELECT * FROM city WHERE name != 'Japan' ORDER BY Population DESC;
+
